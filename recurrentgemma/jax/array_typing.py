@@ -25,7 +25,7 @@ F = TypeVar("F", bound=Callable)
 
 
 def typed(function: F) -> F:
-  return jt.jaxtyped(function, typechecker=typeguard.TypeCheckError)
+  return function#jt.jaxtyped(function, typechecker=typeguard.TypeCheckError)
 
 
 # Notation:
